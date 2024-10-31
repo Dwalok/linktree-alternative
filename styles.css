@@ -1,0 +1,84 @@
+:root{
+    --primary-color: rgb(9, 10, 12);         /* Couleur de fond noire */
+    --overlay-color: rgba(0, 115, 230, 0.04); /* Bleu avec 4% d'opacité */
+    --container-color:#d6d9da;
+    --button-color: #0073e6;
+    --hover-button-color: #005bb5;
+    --text-color: #555;
+    --other-text-color: #fff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    pointer-events: none;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    background-color: var(--container-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--other-text-color);
+    background-color: var(--button-color);
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.links a i {
+    margin-right: 8px;
+}
+
+.links a:hover {
+    background-color: var(--hover-button-color);
+}
